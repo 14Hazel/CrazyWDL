@@ -1,0 +1,44 @@
+<!-- templates/questions.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="question-container">
+        <h1>你学废了吗</h1>
+        <div class="question-box">
+            <p>openWDL的工作流程是由一系列什么组成的有向无环图(DAG)?</p>
+            <form id="quiz-form">
+                <label class="option-container">
+                    <input type="radio" name="answer" value="A">
+                    <span class="checkmark"></span>A. 子工作流程和任务调用
+                </label>
+                <label class="option-container">
+                    <input type="radio" name="answer" value="B">
+                    <span class="checkmark"></span>B. 中间变量和表达式计算结果
+                </label>
+                <label class="option-container">
+                    <input type="radio" name="answer" value="C">
+                    <span class="checkmark"></span>C. 执行日志和系统消息传递路径
+                </label>
+                <label class="option-container">
+                    <input type="radio" name="answer" value="D">
+                    <span class="checkmark"></span>D. 任务和工作流程节点连接关系
+                </label>
+                <button type="button" onclick="submitAnswer()">提交答案</button>
+            </form>
+        </div>
+    </div>
+    <div class="ai-help-container">
+        <textarea id="ai-help-input" placeholder="需要帮助？问问 AI..."></textarea>
+        <button id="ai-help-button">灵魂发问</button>
+        <div id="ai-response-container"></div>
+    </div>
+    <div id="feedback-container"></div>
+    <script src="{{ url_for('static', filename='questions-script.js') }}"></script>
+</body>
+</html>

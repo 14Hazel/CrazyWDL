@@ -1,0 +1,28 @@
+<!-- templates/level1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疯狂WDL - 第一关</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="main-content">
+        <h1>OpenWDL 基础知识</h1>
+        <div class="info-section">
+            <div class="icon task-icon"></div>
+            <h2>1. 任务（Task）</h2>
+            <p>任务是WDL的基本执行单元，它描述了一个可独立运行的计算过程。每个任务都有一个名称，并且可以定义输入和输出。</p>
+        </div>
+        <div class="info-section">
+            <div class="icon workflow-icon"></div>
+            <h2>2. 工作流程（Workflow）</h2>
+            <p>工作流程是由一系列任务组成的有向无环图（DAG）。它描述了任务之间的依赖关系和执行顺序。工作流程中的每个节点都可以是一个任务或一个子工作流程，并且节点之间通过输入和输出进行连接。</p>
+        </div>
+        <!-- 更多的 OpenWDL 知识部分... -->
+        <a href="/questions" class="next-step">下一步</a>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+/* 设置整体背景和字体 */
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chapter-container {
+    margin-top: 30px;
+}
+
+.chapter {
+    display: block;
+    background-color: #58a6ff;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.chapter:hover {
+    background-color: #007bff;
+}
+
+/* 设置主要内容区域的样式，使其在页面中居中 */
+#main-content {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 设置图标样式，类似于多邻国中的圆形图标 */
+.icon {
+    background-color: #eee; /* 你可以根据实际需要更改图标颜色 */
+    border-radius: 50%;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 100px; /* 根据你的需要调整大小 */
+    height: 100px; /* 根据你的需要调整大小 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* 设置进度指示器样式 */
+.progress-indicator {
+    background-color: #ffc107;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 20px 0;
+    font-size: 0.8em;
+    display: inline-block;
+    color: white;
+}
+
+/* 设置超链接的样式 */
+a {
+    display: inline-block;
+    background-color: #58a6ff;
+    color: white;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+a:hover {
+    background-color: #0066cc;
+}
+
+.icon {
+    border-radius: 50%; /* 使 div 成为圆形 */
+    width: 100px; /* 圆形大小 */
+    height: 100px; /* 圆形大小 */
+    background-image: url('./bio_npc.webp'); /* 设置你的图片 */
+    background-size: cover; /* 保证图片覆盖整个圆形且不失真 */
+    background-position: center; /* 使图片居中 */
+    display: inline-block; /* 允许设置宽度和高度 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 可选：为图标添加阴影 */
+    overflow: hidden; /* 确保图片不会溢出圆形边界 */
+}
+
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* 启用滚动捕捉 */
+}
+
+.card {
+    flex: 0 0 auto; /* 不要伸缩卡片的大小 */
+    width: 80%; /* 卡片宽度，根据需求调整 */
+    margin: 10px;
+    scroll-snap-align: start; /* 滚动捕捉对齐 */
+    border-radius: 10px; /* 圆角边框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    background: white; /* 卡片背景色 */
+    padding: 20px; /* 内边距 */
+    box-sizing: border-box; /* 边框和内边距包含在宽度内 */
+}
+
+/* 给卡片内部的标题和内容添加一些样式 */
+.card h2 {
+    color: #333;
+    font-size: 1.2em;
+}
+
+.card p {
+    color: #666;
+    font-size: 1em;
+}
+
+.question-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question-box {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.option-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.option-container input[type="radio"] {
+    margin-right: 10px;
+}
+
+.option-container label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.ai-help-container {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#ai-help-input {
+    width: calc(100% - 90px);
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#ai-help-button {
+    width: 80px;
+    background-color: #58a6ff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#ai-help-button:hover {
+    background-color: #007bff;
+}
+
+.feedback-container {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: red;
+}
+
+/* 自定义的 radio 按钮样式 */
+.option-container input[type="radio"] {
+    accent-color: #58a6ff;
+}
+
+#ai-response-container {
+    margin-top: 10px;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #58a6ff;
+    animation: spin 1s linear infinite;    
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.content-container {
+    position: relative;
+    max-width: 800px; /* 或根据您的设计调整宽度 */
+    margin: 0 auto;
+    padding: 20px;
+    color: #f1f1f1; /* 亮色字体以在深色背景上突出显示 */
+    text-shadow: 2px 2px 4px #000000; /* 文字阴影提高可读性 */
+}
+
+#npc-dialogue-box, #ai-dialogue {
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明背景增强对比 */
+    border: 1px solid #f1f1f1; /* 边框可以省略，取决于您的设计 */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+button#next-requirement {
+    font-size: 1.2em; /* 更大的字体 */
+    font-weight: bold; /* 加粗字体 */
+    color: #f1f1f1;
+    background-color: #007bff; /* 按钮背景色 */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #000000; /* 按钮阴影 */
+    margin-top: 20px;
+    cursor: pointer; /* 手形光标 */
+}
+
+button#next-requirement:hover {
+    background-color: #0056b3; /* 鼠标悬停时的按钮背景色 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 10px;
+    }
+    
+    button#next-requirement {
+        padding: 5px 10px;
+    }
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 300px;
+    max-width: 600px;
+    background-color: #ffffff; /* 白色背景 */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.chat-box-header {
+    background-color: #58a6ff; /* Duolingo蓝色 */
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chat-text {
+    background-color: #f4f4f4; /* 浅灰色背景，用于消息 */
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+
+.player-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc; /* 浅灰色边框 */
+    margin-top: 0px;
+}
+
+.chat-button {
+    background-color: #58a6ff; /* 按钮使用 Duolingo 蓝色 */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+
+.chat-button:hover {
+    background-color: #007bff; /* 鼠标悬停时的颜色变化 */
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .chat-box {
+        width: calc(100% - 20px);
+    }
+}
+
+
+.content-container {
+    position: relative; /* 根据需要调整定位 */
+    /* 其他样式 */
+}
+
+#ai-question-box, #user-input-box, #ai-feedback-box {
+    background-color: rgba(255, 255, 255, 0.8); /* 提供半透明的白色背景以提高可读性 */
+    border-radius: 8px; /* 圆角边框 */
+    padding: 15px; /* 内边距 */
+    margin-bottom: 10px; /* 与下一个元素的间距 */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 文字阴影提高层次感 */
+}
+
+#ai-question, #ai-feedback {
+    color: white; /* 深色文本 */
+    font-size: 1.1em; /* 较大的字体大小 */
+    font-weight: bold; /* 加粗字体 */
+    line-height: 1.4; /* 行高 */
+}
+
+#user-response {
+    width: calc(100% - 30px); /* 输入框宽度，减去内边距 */
+    padding: 10px; /* 输入框内边距 */
+    border: 1px solid #ccc; /* 输入框边框 */
+    border-radius: 4px; /* 输入框圆角 */
+    font-size: 1em; /* 输入框文字大小 */
+    margin-bottom: 10px; /* 与提交按钮的间距 */
+}
+
+#submit-response {
+    background-color: #5cb85c; /* 绿色背景按钮表示确认 */
+    color: white; /* 白色文本 */
+    padding: 10px 20px; /* 按钮内边距 */
+    border: none; /* 无边框 */
+    border-radius: 4px; /* 圆角边框 */
+    cursor: pointer; /* 鼠标悬停变手形状 */
+    font-weight: bold; /* 加粗字体 */
+}
+
+#submit-response:hover {
+    background-color: #4cae4c; /* 鼠标悬停时的深绿色背景 */
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    /* 调整移动设备上的样式 */
+}

@@ -1,0 +1,24 @@
+<!-- templates/endless-requests.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无尽的需求 - 疯狂WDL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/bio_npc.png') }}');">
+    <div class="content-container">
+        <h1>无尽的需求</h1>
+        <div id="ai-query">今天有什么新需求？</div>
+        <button id="next-requirement">下一步</button>
+        <div id="ai-response"></div>
+    </div>
+    <div class="chat-box">
+        <input type="text" class="player-input" placeholder="输入您的回答...">
+        <button class="chat-button">回复</button>
+    </div>
+    
+    <script src="{{ url_for('static', filename='endless-requests-script.js') }}"></script>
+</body>
+</html>

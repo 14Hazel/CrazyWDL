@@ -1,0 +1,22 @@
+<!-- templates/crazy-debug.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疯狂Debug - 疯狂WDL</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body style="background-image: url('{{ url_for('static', filename='images/bio_female_npc2.png') }}');">
+    <div class="content-container">
+        <h1>疯狂Debug</h1>
+        <button id="start-game">开始游戏</button>
+        <div id="ai-question"></div>
+        <input type="text" id="user-response" placeholder="输入您的答案..." style="display:none;">
+        <button id="submit-response" style="display:none;">提交</button>
+        <div id="ai-feedback"></div>
+    </div>
+    <script src="{{ url_for('static', filename='crazy-debug-script.js') }}"></script>
+</body>
+</html>
+
